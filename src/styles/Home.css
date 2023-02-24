@@ -17,11 +17,20 @@
     border-radius: 15px;
 }
 
-.info-containers-left button{
-    align-items: center;
+.info-containers-left h1{
     color: var(--text-input-field);
     display: flex;
     justify-content: center;
+    align-content: end;
+}   
+
+.info-containers-left a{
+    text-decoration: none;
+}   
+
+.info-containers-left a:hover {
+    text-decoration: double;
+    color: var(--hospital-green);
 }
 
 .info-containers-right{

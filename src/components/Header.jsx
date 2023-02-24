@@ -23,7 +23,7 @@ const Header = ({ query, setQuery }) => {
                 <a href="/">Home</a>
             </li>
             <li>
-                <a href="/">Herramientas</a>
+                <a href="/herramientas">Herramientas</a>
             </li>
             <li>
                 <a href="/">Servicios</a>

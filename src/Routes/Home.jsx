@@ -10,8 +10,7 @@ const Home = () => {
         <Header />
             <div className='container'>
                 <div className='info-containers-left'>
-                    <h1>SERVICIOS</h1>
-                    <button>SERVICIOS</button>
+                    <h1><a href="/">SERVICIOS</a></h1>
                 </div>
                 <div className='info-containers-right'>
                     <h1>PRUEBA2</h1>
