@@ -1,21 +1,32 @@
 @import './index.css';
 
 .container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
     background-color: aqua;
-    
+    margin-top: 60px;
+    height: 93vh;
 }
 
-.info-containers{
-    flex: 0 1 150px;
-    margin: 5px;
+.info-containers-left{
+    grid-column: 1;
+    background-color: brown;
     color: bisque;
+    margin: 15px;
 }
 
-/* @media (min-width: 340px){
+.info-containers-right{
+    grid-column: 2;
+    background-color:darkseagreen;
+    color: bisque;
+    margin: 15px;
+}
+
+@media (max-width: 640px){
     .container{
-        background-position-x: center;
+        grid-template-columns: 100%;
     }
-} */
+    .info-containers-right{
+        grid-column: 1;
+    }
+}
