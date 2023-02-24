@@ -1,7 +1,17 @@
 @import './index.css';
 
 .container{
-    width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: aqua;
+    
+}
+
+.info-containers{
+    flex: 0 1 150px;
+    margin: 5px;
+    color: bisque;
 }
 
 /* @media (min-width: 340px){
