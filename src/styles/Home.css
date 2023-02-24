@@ -3,23 +3,23 @@
 .container{
     display: grid;
     grid-template-columns: repeat(2,50%);
-    background-color: aqua;
     margin-top: 60px;
     height: 93vh;
 }
 
 .info-containers-left{
     grid-column: 1;
-    background-color: brown;
-    color: bisque;
+    background-color:var(--hospital-green);
     margin: 15px;
+    opacity: 20%;
 }
 
 .info-containers-right{
     grid-column: 2;
-    background-color:darkseagreen;
+    /* background-color:darkseagreen; */
     color: bisque;
     margin: 15px;
+    justify-items: center;
 }
 
 @media (max-width: 640px){
