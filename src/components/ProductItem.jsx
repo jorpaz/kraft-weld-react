@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import AppContext from "../Context/AppContext";
 import '../styles/ProductItem.css';
 
-const ProductItem = () => {
+const ProductItem = ({ product }) => {
+
+    const { addToCart } = useContext(AppContext);
 
     const handelClick = item => {
         addToCart(item);
@@ -10,14 +13,14 @@ const ProductItem = () => {
 
     return (
         <div className="ProductItem">
-        <img src={product.images[0]} alt={product.title} />
+        <img src={product.images} alt={product.title} />
         <div className="product-info">
             <div>
             <p>${product.price}</p>
             <p>{product.title}</p>
             </div>
             <figure onClick={() => handelClick(product)}>
-            <img src={addToCartImage} alt="" />
+            <img src='' alt="" />
             </figure>
         </div>
         </div>
