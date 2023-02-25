@@ -66,6 +66,11 @@ img{
     cursor: pointer;
 }
 
+.navbar-email img:hover {
+    width: 28px;
+    cursor: pointer;
+}
+
 .navbar-shopping-cart {
     position: relative;
 }
@@ -73,18 +78,24 @@ img{
 .navbar-shopping-cart img {
     width: 30px;
     margin-right: 20px;
+    cursor: pointer;
+}
+
+.navbar-shopping-cart img:hover{
+    width: 33px;
 }
 
 .navbar-shopping-cart div {
     width: 16px;
     height: 16px;
-    background-color: var(--hospital-green);
+    background-color: black;
+    color: var(--white);
     border-radius: 50%;
     font-size: var(--sm);
     font-weight: bold;
     position: absolute;
     top: -6px;
-    right: 0px;
+    right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,23 +109,19 @@ img{
     cursor: pointer;
 }
 
-.navbar-search img:hover{
-    width: 35px;
-    border: 1px solid var(--hospital-green);
-    color: var(--hospital-green);
-    border-radius: 50px;
-}
-
-
 .navbar-search img {
 width: 22px;
 margin-right: 5px;
 }
 
+.navbar-search img:hover{
+    width: 25px;
+}
+
 .searchbar-container {
 position: absolute;
-top: -10px;
-right: 30px;
+top: 42px;
+right: 0px;
 background-color: #fff;
 padding: 10px;
 border: 0.5px solid var(--hospital-green);

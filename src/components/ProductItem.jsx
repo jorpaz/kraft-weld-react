@@ -16,11 +16,11 @@ const ProductItem = ({ product }) => {
         <img src={product.images} alt={product.title} />
         <div className="product-info">
             <div>
-            <p>${product.price}</p>
+            <p>Q{product.price}</p>
             <p>{product.title}</p>
             </div>
             <figure onClick={() => handelClick(product)}>
-            <img src='' alt="" />
+            <img src='src\assets\icons\anadir-a-la-cesta.png' alt="agregar al carrito" />
             </figure>
         </div>
         </div>
