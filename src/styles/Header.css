@@ -163,6 +163,7 @@ border-color: rgba(255, 255, 255, .8);
         margin-top: 5px;
         width: 30px;
         height: 45px;
+        cursor: pointer;
         filter: invert(100%);
     }
 
@@ -172,17 +173,52 @@ border-color: rgba(255, 255, 255, .8);
         left: 0;
         right: 0;
         height: 100vh;
-        background-color: white;
+        background-color: rgba(0, 0, 0, 0.733);
         display: flex;
         flex-direction: column;
         justify-items: start;
         transform: translateX(-100%);
-        transition: all ease-out .5s;
+        transition: all ease-out .3s;
     }
 
     .side-menu.active {
         transform: translateX(0);
     }
+
+    .side-menu ul,
+    .side-menu li{
+        list-style: none;
+        padding: 10px 15px;
+        height: 20px;
+        margin-top: 10px;
+        display: grid;
+        place-items: center;
+    }
+
+    .side-menu ul li a{
+        border-radius: 8px;
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+        padding: 8px;
+        position: relative;
+        transition: color 300ms;
+}
+
+    .side-menu ul li a:hover{
+    color: var(--text-general-2);
+}
+
+.closeIcon{
+    display: grid;
+    justify-items: center;
+    filter: invert(100%);
+    cursor: pointer;
+}
+
+.closeIcon img{
+    width: 35px;
+}
 
     .navbar-left ul {
         display: none;

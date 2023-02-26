@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 
 //?Context
 import AppContext from '../Context/AppContext';
@@ -46,14 +46,29 @@ const Header = ({ query, setQuery }) => {
 
     //?Para deslizar el menu mobile
     const [toggleMenu, setToggleMenu] = useState(false);
-    
+    const handleSideMenu = () => {
+        setToggleMenu(!toggleMenu)
+        setToggleOrders(false);
+        setToggle(false);
+        setIsExpanded(false);
+    }
+
+    //? Para que el fondo no haga scroll mientras está abierto el menu mobile
+    useEffect(() => {
+        if(toggleMenu){
+            document.body.style.overflow = 'hidden';
+        }else {
+            document.body.style.overflow = 'auto'
+        }
+    }, [toggleMenu])
 
     return (
         <nav>
-            <img src={logoIcon} alt="menu" className="menu" />
-            <div className="side-menu">
-                <div>
-                    <img src={closeIcon} alt="" />
+            <img src={logoIcon} alt="menu" className='menu' onClick={() => {setToggleMenu(!toggleMenu)}}/>
+            {/* MENU MOBILE  */}
+            <div className={`side-menu ${toggleMenu ? 'active' : ''}`}>
+                <div className="closeIcon">
+                    <img src={closeIcon} alt="Cerrar" onClick={() => {setToggleMenu(!toggleMenu)}}/>
                 </div>
                 <ul>
                 <li>
@@ -72,6 +87,7 @@ const Header = ({ query, setQuery }) => {
                     <a href="/">Contacto</a>
                 </li>
                 </ul>
+                
             </div>
 
             <div className="navbar-left">
@@ -114,7 +130,7 @@ const Header = ({ query, setQuery }) => {
                 </ul>
             </div>
             {toggle && <Menu />}
-            {toggleOrders && <MyOrder />}
+            {toggleOrders && <MyOrder toggleOrders={toggleOrders} setToggleOrders={setToggleOrders} />}
         </nav>
     );
 };

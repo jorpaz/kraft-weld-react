@@ -4,7 +4,7 @@ import AppContext from '../Context/AppContext';
 import '../styles/MyOrder.css';
 import arrow from '../assets/icons/flecha-izquierda.png';
 
-const MyOrder = () => {
+const MyOrder = (arrowClose) => {
 	const { state } = useContext(AppContext);
 
     const sumTotal = () => {
@@ -16,7 +16,7 @@ const MyOrder = () => {
 	return (
         <aside className="MyOrder">
             <div className="title-container">
-                <img src={arrow} alt="arrow" />
+                <img src={arrow} alt="arrow" onClick={() => arrowClose.setToggleOrders(!arrowClose.toggleOrders)} />
                 <p className="title">My order</p>
             </div>
             <div className="my-order-content seccion-scroll">

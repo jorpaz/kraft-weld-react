@@ -135,9 +135,13 @@
     grid-row:3;
 }
 
+/* ? Mobile */
 @media (max-width: 640px){
     .container{
         grid-template-columns: 100%;
+    }
+    .info-containers-left{
+        height: 70vh;
     }
     .info-containers-right{
         grid-column: 1;

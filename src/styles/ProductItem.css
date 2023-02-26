@@ -15,7 +15,7 @@
     height: 240px;
     border: 1px solid var(--very-light-pink);
     border-radius: 18px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .product-info {

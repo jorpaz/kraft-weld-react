@@ -18,7 +18,7 @@ const products = [
         "title": "Cepillo de Alambre de Acero",
         "price": 25,
         "description": "Mueble de Madera, Protección del Medio Ambiente, Maquinaria, Impresión Textil y Teñido, Eléctrica y Electrónica, Alimento y Bebidas",
-        "images":"src/assets/products/cepillo-pulir-3.webp"
+        "images":"src/assets/products/cepillo-pulir-1.webp"
     },
     {
         "id":4,
@@ -46,7 +46,7 @@ const products = [
         "title": "Pulidora",
         "price": 300,
         "description": "El diseño liviano, compacto y portátil de solo 2.8KG lo hace fácil de transportar y almacenar. El dial de velocidad variable de 6 niveles permite a los usuarios controlar la velocidad de 600 a 3000 RPM de acuerdo con varias tareas o materiales y mejorar la eficiencia del trabajo",
-        "images":"https://m.media-amazon.com/images/I/71ot93nr9HL._AC_SL1500_.jpg"
+        "images":"https://http2.mlstatic.com/D_NQ_NP_803109-MLA48655070664_122021-W.jpg"
     },
     {
         "id":8,
