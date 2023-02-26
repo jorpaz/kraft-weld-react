@@ -147,7 +147,15 @@ outline: none;
 border-color: rgba(255, 255, 255, .8);
 }
 
+/* ? Menu desplegable en mobile */
 
+.side-menu{
+    display: none;
+}
+
+.side-menu img{
+    width: 20px;
+}
 
 @media (max-width: 640px) {
     .menu {
@@ -156,6 +164,24 @@ border-color: rgba(255, 255, 255, .8);
         width: 30px;
         height: 45px;
         filter: invert(100%);
+    }
+
+    .side-menu{
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-items: start;
+        transform: translateX(-100%);
+        transition: all ease-out .5s;
+    }
+
+    .side-menu.active {
+        transform: translateX(0);
     }
 
     .navbar-left ul {
