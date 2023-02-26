@@ -3,12 +3,11 @@
   --black: #000000;
   --very-light-pink: #C7C7C7;
   --text-input-field: #F7F7F7;
-  /* --hospital-green: #ACD9B2; */
   --hospital-green: #63a3ec;
   --sm: 14px;
   --md: 16px;
   --lg: 18px;
-  font-family: 'Tilt Neon', cursive;
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
 body{

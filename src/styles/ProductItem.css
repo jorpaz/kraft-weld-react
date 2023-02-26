@@ -2,12 +2,19 @@
 
 .ProductItem {
     width: 240px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.ProductItem:hover{
+    object-fit: cover;
+    transform: scale(1.05);
 }
 
 .ProductItem img {
     width: 240px;
     height: 240px;
-    border-radius: 20px;
+    border: 1px solid var(--very-light-pink);
+    border-radius: 18px;
     object-fit: cover;
 }
 
@@ -26,6 +33,7 @@
     width: 35px;
     height: 35px;
     cursor: pointer;
+    border: none;
 }
 
 .product-info div p:nth-child(1) {
