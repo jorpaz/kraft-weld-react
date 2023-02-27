@@ -1,5 +1,10 @@
 @import './index.css';
 
+.grid-Padre{
+    display: grid;
+    grid-template-columns: repeat(2,340px);
+}
+
 .ProductDetail {
     padding-bottom: 24px;
     position: fixed;
@@ -9,7 +14,7 @@
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.692);
     display: grid;
-    grid-template-columns: repeat(1,auto);
+    grid-column: 1;
     place-items: center;
     z-index: 100;
 }
@@ -48,10 +53,7 @@
 }
 
 @media (max-width: 640px) {
-    .ProductDetail {
-        width: 100%;
-        grid-template-columns: repeat(1,50%);
-    }
+    
 
     .product-info-2 {
         width: 100%;
