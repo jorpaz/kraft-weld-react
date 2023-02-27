@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import ProductDetail from "../Containers/ProductDetail";
 import AppContext from "../Context/AppContext";
 import '../styles/ProductItem.css';
@@ -19,6 +19,15 @@ const ProductItem = ({ product }) => {
         setToggleDetail(!toggleDetail);
     }
 
+    //? Para pasar informacion a ProductList y anular el scroll
+    useEffect(() => {
+        if(toggleDetail){
+            document.body.style.overflow = 'hidden'
+        }else {
+            document.body.style.overflow = 'auto'
+        }
+    }, [toggleDetail])
+
     return (
         <>
         
@@ -34,7 +43,7 @@ const ProductItem = ({ product }) => {
                 </figure>
             </div>
         </div>
-        {toggleDetail && <ProducwtDetail product={product} key={product.id} toggleDetail={toggleDetail} setToggleDetail={setToggleDetail} />}
+        {toggleDetail && <ProductDetail product={product} key={product.id} toggleDetail={toggleDetail} setToggleDetail={setToggleDetail} onClose={() => setToggleDetail(false)} />}
         </>
     );
 };

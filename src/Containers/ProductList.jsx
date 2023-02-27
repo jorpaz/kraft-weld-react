@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from '../components/Header';
 import ProductItem from '../components/ProductItem';
 import useGetProducts from '../hooks/useGetProducts';
@@ -12,6 +12,7 @@ const ProductList = () => {
     const [toggleDetail, setToggleDetail] = useState(false);
     const handleToggleDetail = () => {
         setToggleDetail(!toggleDetail);
+        console.log(toggleDetail);
     }
 
     return (
@@ -20,7 +21,11 @@ const ProductList = () => {
                 <section className="main-container">
                     <div className="ProductList">
                         {products.map(product => (
-                            <ProductItem product={product} key={product.id} toggleDetail={toggleDetail} setToggleDetail={setToggleDetail} />
+                            <ProductItem 
+                            product={product} 
+                            key={product.id} 
+                            toggleDetail={toggleDetail} 
+                            setToggleDetail={setToggleDetail} />
                         ))}
                     </div>
                 </section>
