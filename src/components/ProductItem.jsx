@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import ProductDetail from "../Containers/ProductDetail";
 import AppContext from "../Context/AppContext";
 import '../styles/ProductItem.css';
+import iconCesta from '../assets/icons/anadir-a-la-cesta.png';
 
 const ProductItem = ({ product }) => {
 
@@ -39,11 +40,16 @@ const ProductItem = ({ product }) => {
                 <p>{product.title}</p>
                 </div>
                 <figure onClick={() => handelClick(product)}>
-                <img src='src\assets\icons\anadir-a-la-cesta.png' alt="agregar al carrito" />
+                    <img src={iconCesta} alt="cesta" />
                 </figure>
             </div>
         </div>
-        {toggleDetail && <ProductDetail product={product} key={product.id} toggleDetail={toggleDetail} setToggleDetail={setToggleDetail} onClose={() => setToggleDetail(false)} />}
+        {toggleDetail && <ProductDetail
+        product={product}
+        key={product.id} 
+        toggleDetail={toggleDetail} 
+        setToggleDetail={setToggleDetail} 
+        onClose={() => setToggleDetail(false)} />}
         </>
     );
 };
