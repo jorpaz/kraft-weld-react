@@ -14,6 +14,7 @@ const ProductInfo = ({ product }) => {
 
     return (
         <>
+        
         <img
             src={product.images}
             alt={product.title}
