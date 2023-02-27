@@ -4,6 +4,11 @@
     margin: 24px 24px 0 24px;
 }
 
+.product-info img{
+    width: 20px;
+    filter: invert(100%);
+}
+
 .product-info p:nth-child(1) {
     font-weight: bold;
     font-size: var(--md);

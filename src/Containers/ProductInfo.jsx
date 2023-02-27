@@ -1,23 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
+import AppContext from "../Context/AppContext";
 import '../styles/ProductInfo.css';
 
-const ProductInfo = () => {
+const ProductInfo = ({ product }) => {
+
+    const { addToCart } = useContext(AppContext);
+
+    const handelClick = item => {
+        addToCart(item);
+        console.log(addToCart);
+    }
+
     return (
-        //? Clase 12
         <>
         <img
-            src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-            alt="bike"
+            src={product.images}
+            alt={product.title}
         />
-        <div classname="product-info">
-            <p>$35,00</p>
-            <p>Bike</p>
-            <p>
-            With its practical position, this bike also fulfills a decorative
-            function, add your hall or workspace.
-            </p>
-            <button classname="primary-button add-to-cart-button">
-            <img src="./icons/bt_add_to_cart.svg" alt="add to cart" />
+        <div className="product-info">
+            <p>Q{product.price}</p>
+            <p>{product.title}</p>
+            <p>{product.description}</p>
+            <button className="primary-button add-to-cart-button">
+            <img src="src/assets/icons/anadir-a-la-cesta.png" alt="add to cart" />
             Add to cart
             </button>
         </div>

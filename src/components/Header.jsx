@@ -115,10 +115,10 @@ const Header = ({ query, setQuery }) => {
                 <li className="navbar-search" >
                     <img src={searchIcon} alt="" onClick={handleSearchClick} />
                     {isExpanded && (
-            <div className="searchbar-container">
-                <SearchBar query={query} setQuery={setQuery} />
-            </div>
-            )}
+                        <div className="searchbar-container">
+                            <SearchBar query={query} setQuery={setQuery} />
+                        </div>
+                    )}
                 </li>
                 <li className="navbar-email" >
                     <img src='./src/assets/icons/usuario.png' alt="LOGO" onClick={handleToggle} />
