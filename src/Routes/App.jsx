@@ -17,6 +17,7 @@ import Home from "../pages/Home";
 //? Pages
 import Login from "../pages/Login";
 import NotFound from '../pages/NotFound';
+import Checkout from "../pages/Checkout.jsx";
 
 //? Styles
 import '../styles/index.css';
@@ -34,6 +35,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/herramientas' element={<ProductList />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/checkout' element={<Checkout />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Layout>

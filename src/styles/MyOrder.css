@@ -84,7 +84,7 @@ border-radius: 20px;
     font-weight: bold;
 }
 
-.primary-button {
+.primary-button-1 {
     background-color: var(--hospital-green);
     border-radius: 8px;
     border: none;
@@ -94,6 +94,7 @@ border-radius: 20px;
     font-size: var(--md);
     font-weight: bold;
     height: 50px;
+    text-decoration: none;
 }
 
 @media (max-width: 640px) {

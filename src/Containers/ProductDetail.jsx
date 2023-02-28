@@ -17,14 +17,12 @@ const ProductDetail = ({ product, toggleDetail, setToggleDetail, onClose }) => {
     return (
     <>
         <Header />
-        <div className="grid-Padre">
             <aside className="ProductDetail">
                 <div className="ProductDetail-close">
                     {<img src="src\assets\icons\boton-de-cierre.png" alt="close" onClick={onClose} />}
                 </div>
                 <ProductInfo product={product} />
             </aside>
-        </div>
     </>
     );
 };

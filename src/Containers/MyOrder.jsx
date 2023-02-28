@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import OrderItem from '../components/OrderItem';
 import AppContext from '../Context/AppContext';
+
+//?Styles
 import '../styles/MyOrder.css';
 import arrow from '../assets/icons/flecha-izquierda.png';
 
@@ -11,6 +13,11 @@ const MyOrder = (arrowClose) => {
     const reducer = (accumulator, currentValue) => accumulator + currentValue.price;
     const sum = state.cart.reduce(reducer, 0);
     return sum;
+    }
+
+    //?Para redireccionar a la pagina de checkout
+    const handleButton = () =>{
+        window.location.href = `/checkout?product=${encodeURIComponent(JSON.stringify(state.cart))}`;
     }
 
 	return (
@@ -30,8 +37,8 @@ const MyOrder = (arrowClose) => {
                 </p>
                 <p>Q {sumTotal()}</p>
                 </div>
-                <button className="primary-button">
-                PAGAR
+                <button className="primary-button-1" onClick={handleButton} >
+                    PAGAR
                 </button>
             </div>
             </div>
