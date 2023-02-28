@@ -27,7 +27,7 @@
 }
 
 .info-containers-left h1{
-    grid-row: 1;
+    grid-row: 2;
     display: grid;
     justify-items: center;
     align-items: center;

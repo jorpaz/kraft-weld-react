@@ -57,7 +57,7 @@ const Login = () => {
                 <button
                     type="submit"
                     onClick={handleSubmit}
-                    className="primary-button login-button"
+                    className="primary-button-enter login-button"
                 >
                     INGRESAR
                 </button>

@@ -11,6 +11,7 @@ const Checkout = () => {
     const { state } = useContext(AppContext);
     const [product, setProduct] = useState(null);
 
+    //? Para recibir propiedades desde MyOrder
     useEffect(() => {
         const search = window.location.search;
         const params = new URLSearchParams(search);
@@ -31,7 +32,7 @@ const Checkout = () => {
 								<span>03.25.21</span>
 								<span>6 articles</span>
 							</p>
-							<p>$560.00</p>
+							<p>Q560</p>
 						</div>
 					</div>
 					{product && product.map((item, index) => (

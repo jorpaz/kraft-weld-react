@@ -6,9 +6,9 @@ import iconCesta from '../assets/icons/anadir-a-la-cesta.png';
 
 const ProductItem = ({ product }) => {
 
+    //? Para agregar un producto al carrito
     const { addToCart } = useContext(AppContext);
 
-    //? Para agregar un producto al carrito
     const handelClick = item => {
         addToCart(item);
         console.log(addToCart);

@@ -1,0 +1,68 @@
+
+
+/* Estilos para el contenido */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos para la sección de "Acerca de nosotros" */
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.about-section img {
+  max-width: 50%;
+  margin-right: 20px;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Estilos para la sección de "Nuestro equipo" */
+.team-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  width: 300px;
+  margin: 20px;
+}
+
+.team-member img {
+  max-width: 100%;
+}
+
+.team-member h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.team-member p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Estilos para el pie de página */
+footer {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+footer p {
+  font-size: 1rem;
+}

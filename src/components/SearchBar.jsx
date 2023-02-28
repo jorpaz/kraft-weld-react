@@ -1,19 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import useGetProducts from '../hooks/useGetProducts';
 import '../styles/SearchBar.css'
-import searchIcon from '../assets/icons/lupa.png';
 
 
 const SearchBar = ({ query, setQuery }) => {
 
-    const [showDropdown, setShowDropdown] = useState(false);
+    //? Para Busqueda dinamica
+    const [productArray, setProductArray] = useState([]); //?DATOS DE FORMA DINAMICA trae los productos del array
+    const [productSearch, setProductSearch] = useState([]); //?DATOS DE FORMA ESTATICA
+    const [busqueda, setBusqueda] = useState(''); //?PARA CONTROLAR LO QUE SE DIGITA EN LA BUSQUEDA
 
-    const handleInputChange = (event) => {
-    setQuery(event.target.value);
+    const handleInputChange = event => {
+        const escrito = event.target.value;
+        setBusqueda(event.target.value);
+        filtrar(event.target.value);
+        /* console.log(escrito); */
     };
+
+    const filtrar =(terminoBusqueda) => {
+        var resultadosBusqueda = productSearch.filter((elemento) => {
+            if(elemento.title.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
+                return elemento;
+            }
+        })
+        setProductArray(resultadosBusqueda);
+        console.log(resultadosBusqueda);
+    }   
+
+    useEffect(()=>{
+        const products = useGetProducts();//? Llamando productos del array del Hook
+        setProductArray(products);
+        setProductSearch(products);
+    }),[];
+
+    //? Para opciones desplegables
+    const [showDropdown, setShowDropdown] = useState(false);
 
     const handleSubmit = (event) => {
     event.preventDefault();
-    // Aquí puedes hacer la búsqueda
+    
     };
 
     return (
