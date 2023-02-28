@@ -38,16 +38,18 @@ const Header = ({ query, setQuery }) => {
 
     //?Para mostrar el carrito de compras
     const [toggleOrders, setToggleOrders] = useState(false);
-    const handleClose = () =>{
+    const handleCart = () =>{
         setToggleOrders(!toggleOrders);
+        setIsExpanded(false);
         setToggle(false);
         setIsExpanded(false);
+        setToggleMenu(false);
     }
 
     //?Para deslizar el menu mobile
     const [toggleMenu, setToggleMenu] = useState(false);
     const handleSideMenu = () => {
-        setToggleMenu(!toggleMenu)
+        setToggleMenu(!toggleMenu);
         setToggleOrders(false);
         setToggle(false);
         setIsExpanded(false);
@@ -64,11 +66,11 @@ const Header = ({ query, setQuery }) => {
 
     return (
         <nav>
-            <img src={logoIcon} alt="menu" className='menu' onClick={() => {setToggleMenu(!toggleMenu)}}/>
+            <img src={logoIcon} alt="menu" className='menu' onClick={handleSideMenu}/>
             {/* MENU MOBILE  */}
             <div className={`side-menu ${toggleMenu ? 'active' : ''}`}>
                 <div className="closeIcon">
-                    <img src={closeIcon} alt="Cerrar" onClick={() => {setToggleMenu(!toggleMenu)}}/>
+                    <img src={closeIcon} alt="Cerrar" onClick={handleSideMenu}/>
                 </div>
                 <ul>
                 <li>
@@ -124,7 +126,7 @@ const Header = ({ query, setQuery }) => {
                     <img src='./src/assets/icons/usuario.png' alt="LOGO" onClick={handleToggle} />
                 </li>
                 <li className="navbar-shopping-cart">
-                    <img src='src/assets/icons/carrito-de-compras.png' alt="shopping cart" onClick={() => setToggleOrders(!toggleOrders)} />
+                    <img src='src/assets/icons/carrito-de-compras.png' alt="shopping cart" onClick={handleCart} />
                     {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
                 </li>
                 </ul>

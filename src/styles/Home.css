@@ -135,6 +135,15 @@
     grid-row:3;
 }
 
+.text-promo-bajo p a{
+    color: #6059ff;
+    text-decoration: none;
+}
+
+.text-promo-bajo a:hover {
+    transform: scale(1.2);
+}
+
 /* ? Mobile */
 @media (max-width: 640px){
     .container{

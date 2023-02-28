@@ -24,7 +24,7 @@ const Home = () => {
                         <h1>PRECIO ESPECIAL</h1>
                     </div>
                     <div className='text-promo-bajo'>
-                        <p>Compralo ya</p>
+                        <p><a href="/herramientas">Descúbrelo</a></p>
                     </div>
                 </div>
             </div>

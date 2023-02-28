@@ -147,6 +147,7 @@ const products = [
         "images":"https://m.media-amazon.com/images/I/61dFSadEmqL._AC_SL1024_.jpg"
     },
     
+    
 ];
 
 const useGetProducts = () => {
