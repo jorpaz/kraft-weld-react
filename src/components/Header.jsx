@@ -64,6 +64,21 @@ const Header = ({ query, setQuery }) => {
         }
     }, [toggleMenu])
 
+    //! Ocultar el componente SearchBar cuando se haga clic en cualquier parte de la página
+    useEffect(() => {
+        const handleClick = (event) => {
+            if (searchbarRef.current && !searchbarRef.current.contains(event.target)) {
+                setIsExpanded(false);
+            }
+        };
+
+        window.addEventListener('click', handleClick);
+
+        return () => {
+            window.removeEventListener('click', handleClick);
+        };
+    }, [searchbarRef]);
+
     return (
         <nav>
             <img src={logoIcon} alt="menu" className='menu' onClick={handleSideMenu}/>
@@ -115,7 +130,11 @@ const Header = ({ query, setQuery }) => {
             <div className="navbar-right">
                 <ul>
                 <li className="navbar-search" >
-                    <img src={searchIcon} alt="" onClick={handleSearchClick} />
+                    <img src={searchIcon} 
+                    alt="buscador" 
+                    onClick={handleSearchClick}
+                    onFocus={() => setIsExpanded(true)}
+                    />
                     {isExpanded && (
                         <div className="searchbar-container">
                             <SearchBar query={query} setQuery={setQuery} />
