@@ -130,7 +130,7 @@ const SearchBar = ({ query, setQuery }) => {
                 />
                 <div className={`dropdown-menu ${showDropdown ? 'show' : ''}`}>
                 <button className='dropdown-item' type='button'>
-                    Acción 1
+                    <p>{busqueda}</p>
                 </button>
                 <button className='dropdown-item' type='button'>
                     Acción 2

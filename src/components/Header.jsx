@@ -26,6 +26,7 @@ const Header = ({ query, setQuery }) => {
         setIsExpanded(!isExpanded);
         setToggle(false);
         setToggleOrders(false);
+        setToggleMenu(false);
         };
 
     //? Para que muestre el menu de usuario
@@ -34,6 +35,7 @@ const Header = ({ query, setQuery }) => {
         setToggle(!toggle);
         setIsExpanded(false);
         setToggleOrders(false);
+        setToggleMenu(false);
     }
 
     //?Para mostrar el carrito de compras
@@ -42,7 +44,6 @@ const Header = ({ query, setQuery }) => {
         setToggleOrders(!toggleOrders);
         setIsExpanded(false);
         setToggle(false);
-        setIsExpanded(false);
         setToggleMenu(false);
     }
 
@@ -63,21 +64,6 @@ const Header = ({ query, setQuery }) => {
             document.body.style.overflow = 'auto'
         }
     }, [toggleMenu])
-
-    //! Ocultar el componente SearchBar cuando se haga clic en cualquier parte de la página
-    useEffect(() => {
-        const handleClick = (event) => {
-            if (searchbarRef.current && !searchbarRef.current.contains(event.target)) {
-                setIsExpanded(false);
-            }
-        };
-
-        window.addEventListener('click', handleClick);
-
-        return () => {
-            window.removeEventListener('click', handleClick);
-        };
-    }, [searchbarRef]);
 
     return (
         <nav>
@@ -133,7 +119,7 @@ const Header = ({ query, setQuery }) => {
                     <img src={searchIcon} 
                     alt="buscador" 
                     onClick={handleSearchClick}
-                    onFocus={() => setIsExpanded(true)}
+                    
                     />
                     {isExpanded && (
                         <div className="searchbar-container">
