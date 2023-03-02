@@ -3,7 +3,6 @@ import useGetProducts from '../hooks/useGetProducts';
 import '../styles/SearchBar.css'
 import DataSearcher from './DataSearcher';
 
-
 const SearchBar = ({ query, setQuery }) => {
 
     //? Para Busqueda dinamica
@@ -46,7 +45,7 @@ const SearchBar = ({ query, setQuery }) => {
     };
 
     return (
-        
+    <>
         <form onSubmit={handleSubmit} className='navbar-search'>
             <div className='input-group'>
                 <input
@@ -71,8 +70,9 @@ const SearchBar = ({ query, setQuery }) => {
                 </button>
                 </div>
             </div>
-                {busqueda.length > 0 ? <DataSearcher/> : null}
         </form>
+        {busqueda.length > 0 ? <DataSearcher/> : null}
+    </>
     );
 };
 

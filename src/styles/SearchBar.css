@@ -2,6 +2,7 @@
 
 .navbar-search {
   position: relative;
+  width: 100%;
 }
 
 .navbar-search .dropdown-menu {
@@ -11,7 +12,7 @@
   z-index: 1000;
   display: none;
   float: left;
-  min-width: 10rem;
+  /* min-width: 10rem; */
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
@@ -30,13 +31,17 @@
 
 .navbar-search .dropdown-item {
   display: block;
-  /* width: 100%; */
+  width: 100%;
   padding: 0.25rem 1.5rem;
   clear: both;
   font-weight: 400;
   color: #212529;
   text-align: inherit;
-  /* white-space: nowrap; */
+  white-space: nowrap;
   background-color: transparent;
   border: 0;
+}
+
+.form-control{
+  width: 100%;
 }
