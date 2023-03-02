@@ -45,21 +45,22 @@ const SearchBar = ({ query, setQuery }) => {
     };
 
     return (
+        
         <form onSubmit={handleSubmit} className='navbar-search'>
             <div className='input-group'>
                 <input
-                type='text'
-                className='form-control'
-                placeholder='¿Qué Buscas?'
-                value={query}
-                onChange={handleInputChange}
-                onFocus={() => setShowDropdown(true)}
-                onBlur={() => setShowDropdown(false)}
-                ref={inputRef} //?Agrega la referencia
+                    type='text'
+                    className='form-control'
+                    placeholder='¿Qué Buscas?'
+                    value={query}
+                    onChange={handleInputChange}
+                    onFocus={() => setShowDropdown(true)}
+                    onBlur={() => setShowDropdown(false)}
+                    ref={inputRef} //?Agrega la referencia
                 />
                 <div className={`dropdown-menu ${showDropdown ? 'show' : ''}`}>
                 <button className='dropdown-item' type='button'>
-                    <p>'{busqueda}'</p>
+                    {busqueda ? <p>"{busqueda}"</p> : null}
                 </button>
                 <p>
                     Descubre Nuestros Lanzamientos.
