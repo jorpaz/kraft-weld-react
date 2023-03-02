@@ -41,8 +41,16 @@ const SearchBar = ({ query, setQuery }) => {
 
     const handleSubmit = (event) => {
     event.preventDefault();
-    
     };
+
+    //? Para quitarle el foco al DropDown cuando se espieza a escribir en el input, así solo sale lo que se busca
+    useEffect(() => {
+        if (busqueda.length > 0) {
+            setShowDropdown(false);
+        }else{
+            setShowDropdown(true);
+        }
+    }, [busqueda]);
 
     return (
     <>
@@ -60,18 +68,15 @@ const SearchBar = ({ query, setQuery }) => {
                 />
                 <div className={`dropdown-menu ${showDropdown ? 'show' : ''}`}>
                 <button className='dropdown-item' type='button'>
-                    {busqueda ? <p>"{busqueda}"</p> : null}
-                </button>                
-                <p>
-                    Nuevos Lanzamientos
-                </p>
+                    Descuentos
+                </button>
                 <button className='dropdown-item' type='button'>
-                    Acción 2
+                    Ofertas
                 </button>
                 </div>
             </div>
         </form>
-        {busqueda.length > 0 ? <DataSearcher/> : null}
+        {busqueda.length > 0 ? <DataSearcher busqueda={busqueda} /> : null}
     </>
     );
 };

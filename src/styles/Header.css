@@ -130,15 +130,15 @@ filter: invert(100%);
 position: absolute;
 top: 40px;
 right: 0px;
-background-color: #fff;
+background-color: rgba(22, 22, 23, .8);
+backdrop-filter: saturate(130%) blur(10px);
 padding: 10px;
 border: 0.5px solid rgba(22, 22, 23, .8);
 border-radius: 10px;
-width: 100%;
 }
 
 
-.search-input {
+/* .search-input {
 width: 100%;
 padding: 5px;
 font-size: 14px;
@@ -149,7 +149,7 @@ border-bottom: 1px solid #ccc;
 .search-input:focus {
 outline: none;
 border-color: rgba(255, 255, 255, .8);
-}
+} */
 
 /* ? Menu desplegable en mobile */
 
