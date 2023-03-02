@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import useGetProducts from '../hooks/useGetProducts';
 import '../styles/SearchBar.css'
+import DataSearcher from './DataSearcher';
 
 
 const SearchBar = ({ query, setQuery }) => {
@@ -61,15 +62,16 @@ const SearchBar = ({ query, setQuery }) => {
                 <div className={`dropdown-menu ${showDropdown ? 'show' : ''}`}>
                 <button className='dropdown-item' type='button'>
                     {busqueda ? <p>"{busqueda}"</p> : null}
-                </button>
+                </button>                
                 <p>
-                    Descubre Nuestros Lanzamientos.
+                    Nuevos Lanzamientos
                 </p>
                 <button className='dropdown-item' type='button'>
                     Acción 2
                 </button>
                 </div>
             </div>
+                {busqueda.length > 0 ? <DataSearcher/> : null}
         </form>
     );
 };

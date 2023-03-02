@@ -1,0 +1,6 @@
+@import './index.css';
+
+.container-main{
+    width: 100vh;
+    height: 60vh;
+}

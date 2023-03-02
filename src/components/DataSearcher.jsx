@@ -1,8 +1,16 @@
-import React from 'react'
+import React from 'react';
+import '../styles/DataSearcher.css';
 
 const DataSearcher = () => {
     return (
-        <div>DataSearcher</div>
+        <div className='container-main'>
+            <div className="container-searcher">
+                <div className="info-searcher">
+                    <h1>QUIERES MÁS?</h1>
+
+                </div>
+            </div>
+        </div>
     )
 }
 
