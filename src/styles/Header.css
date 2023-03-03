@@ -107,8 +107,13 @@ img{
 /*? Lógica de input desplegable al hacer click  */
 
 .navbar-search {
+<<<<<<< HEAD
     position: relative;
     /* width: 100%;
+=======
+    /* position: relative;
+    width: 100%;
+>>>>>>> f4c5003d05f00d60a40e47550483696178e48c8d
     height: 100%; */
     display: flex;
     align-items: center;
@@ -122,9 +127,10 @@ filter: invert(100%);
 }
 
 .navbar-search img:hover{
-    width: 25px;
+    transform: scale(1.3);
 }
 
+<<<<<<< HEAD
 /*? Buscador  */
 .searchbar-container {
     /* position: absolute;
@@ -138,6 +144,8 @@ filter: invert(100%);
 }
 
 
+=======
+>>>>>>> f4c5003d05f00d60a40e47550483696178e48c8d
 /* .search-input {
 width: 100%;
 padding: 5px;

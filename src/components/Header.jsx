@@ -122,9 +122,7 @@ const Header = ({ query, setQuery }) => {
                     
                     />
                     {isExpanded && (
-                        <div className="searchbar-container">
-                            <SearchBar query={query} setQuery={setQuery} />
-                        </div>
+                        <SearchBar query={query} setQuery={setQuery} />
                     )}
                 </li>
                 <li className="navbar-email" >
