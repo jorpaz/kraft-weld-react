@@ -1,11 +1,12 @@
 @import './index.css';
 
 .container-main{
-<<<<<<< HEAD
+    width: 650px;
     display: grid;
-    width: 100%;
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: repeat(2,50%);
     background-color: aqua;
-=======
+    margin-top: 10;
     /*? Buscador  */
     /* searchbar-container */
     position: absolute;
@@ -16,14 +17,46 @@
     padding: 10px;
     border: 0.5px solid rgba(22, 22, 23, .8);
     border-radius: 10px;
->>>>>>> f4c5003d05f00d60a40e47550483696178e48c8d
 }
 
-.info-searcher {
+.container-searcher{
+    grid-row: 1;
     color: white;
-    height: 90vh;
 }
 
-.info-searcher h1{
+.dropdown-menu1{
     color: white;
+    display: grid;
+    grid-column: 2;
+    grid-row: 1;
+    justify-items: end;
+}
+
+.dropdown-item-button{
+    color: white;
+    display: grid;
+    justify-items: end;
+    align-items: center;
+    width: 50%;
+    clear: both;
+    font-weight: 400;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.search-match{
+    display: grid;
+    grid-column: 1;
+    grid-row: 2;
+    color: white;
+}
+
+.container-searcher-2{
+    color: white;
+    display: grid;
+    grid-column: 2;
+    grid-row: 2;
+    justify-items: end;
 }

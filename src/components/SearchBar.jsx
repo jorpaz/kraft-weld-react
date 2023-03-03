@@ -26,7 +26,8 @@ const SearchBar = ({ query, setQuery }) => {
             }
         })
         setProductArray(resultadosBusqueda);
-        console.log(resultadosBusqueda);
+        /* console.log(resultadosBusqueda); */
+        console.log(resultadosBusqueda.map((elemento) => elemento.title).join(','));
     }   
 
     useEffect(()=>{
@@ -66,17 +67,17 @@ const SearchBar = ({ query, setQuery }) => {
                     onBlur={() => setShowDropdown(false)}
                     ref={inputRef} //?Agrega la referencia
                 />
-                <div className={`dropdown-menu ${showDropdown ? 'show' : ''}`}>
+                {/* <div className={`dropdown-menu ${showDropdown ? 'show' : ''}`}>
                 <button className='dropdown-item' type='button'>
                     Descuentos
                 </button>
                 <button className='dropdown-item' type='button'>
                     Ofertas
                 </button>
-                </div>
+                </div> */}
             </div>
         </form>
-        {busqueda.length > 0 ? <DataSearcher busqueda={busqueda} /> : null}
+        {busqueda.length > 0 ? <DataSearcher busqueda={busqueda} productArray={productArray} /> : null}
     </>
     );
 };

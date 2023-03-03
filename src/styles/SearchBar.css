@@ -26,7 +26,7 @@
 }
 
 .navbar-search .dropdown-menu.show {
-  display: block;
+  display: block; 
 }
 
 .navbar-search .dropdown-item {
