@@ -1,7 +1,9 @@
 @import './index.css';
 
 .container-main{
+    display: grid;
     width: 100%;
+    background-color: aqua;
 }
 
 .info-searcher {
