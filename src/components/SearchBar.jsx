@@ -9,8 +9,17 @@ const SearchBar = ({ query, setQuery }) => {
     const [productArray, setProductArray] = useState([]); //?DATOS DE FORMA DINAMICA trae los productos del array
     const [productSearch, setProductSearch] = useState([]); //?DATOS DE FORMA ESTATICA
     const [busqueda, setBusqueda] = useState(''); //?PARA CONTROLAR LO QUE SE DIGITA EN LA BUSQUEDA
+    const [searchResult, setSearchResult] = useState([]); //? RESULTADO DE LA BUSQUEDA
+
 
     const inputRef = useRef(null); //?Referencia para el input
+
+    useEffect(()=>{
+        const products = useGetProducts();//? Llamando productos del array del Hook
+        setProductArray(products);
+        setProductSearch(products);
+        inputRef.current.focus(); //?Enfoca el input
+    }),[];
 
     const handleInputChange = event => {
         const escrito = event.target.value;
@@ -25,17 +34,12 @@ const SearchBar = ({ query, setQuery }) => {
                 return elemento;
             }
         })
-        setProductArray(resultadosBusqueda);
+        /* setProductArray(resultadosBusqueda); */
+        setSearchResult(resultadosBusqueda);
         /* console.log(resultadosBusqueda); */
-        console.log(resultadosBusqueda.map((elemento) => elemento.title).join(','));
+        /* console.log(resultadosBusqueda.map((elemento) => elemento.title).join(',')); */
     }   
 
-    useEffect(()=>{
-        const products = useGetProducts();//? Llamando productos del array del Hook
-        setProductArray(products);
-        setProductSearch(products);
-        inputRef.current.focus(); //?Enfoca el input
-    }),[];
 
     //? Para opciones desplegables
     const [showDropdown, setShowDropdown] = useState(false);
@@ -75,9 +79,12 @@ const SearchBar = ({ query, setQuery }) => {
                     Ofertas
                 </button>
                 </div> */}
+
+                
+
             </div>
         </form>
-        {busqueda.length > 0 ? <DataSearcher busqueda={busqueda} productArray={productArray} /> : null}
+        {busqueda.length > 0 ? <DataSearcher busqueda={busqueda} searchResult={searchResult} /> : null}
     </>
     );
 };

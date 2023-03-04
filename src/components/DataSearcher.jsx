@@ -1,9 +1,9 @@
 import React from 'react';
 import '../styles/DataSearcher.css';
 
-const DataSearcher = ({ busqueda, productArray }) => {
+const DataSearcher = ({ busqueda, searchResult }) => {
         
-    const productsFind = productArray.map((elemento) => elemento.price).join(',');
+    /* const productsFind = productArray.map((elemento) => elemento.price).join(','); */
 
     return (
 
@@ -23,8 +23,10 @@ const DataSearcher = ({ busqueda, productArray }) => {
                 <h2>SEGUNDA PRUEBA</h2>
             </div>
             <div className="search-match">
-                <p>{productsFind}</p>
-                {/* {console.log(productsFind)} */}
+            {searchResult &&
+                searchResult.slice(0,2).map((producto) => (
+                    <p>{producto.title}</p>
+                ))}
             </div>
         </div>
     )
