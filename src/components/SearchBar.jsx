@@ -59,7 +59,7 @@ const SearchBar = ({ query, setQuery }) => {
 
     return (
     <>
-        <form onSubmit={handleSubmit} className='navbar-search'>
+        <form onSubmit={handleSubmit} className='navbar-search1'>
             <div className='input-group'>
                 <input
                     type='text'

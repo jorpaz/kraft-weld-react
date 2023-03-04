@@ -20,13 +20,10 @@ const DataSearcher = ({ busqueda, searchResult }) => {
                 </button>
             </div>
             <div className="container-searcher-2">
-                <h2>SEGUNDA PRUEBA</h2>
+                <p>Todos los Productos</p>
             </div>
             <div className="search-match">
-            {searchResult &&
-                searchResult.slice(0,2).map((producto) => (
-                    <p>{producto.title}</p>
-                ))}
+            {searchResult && searchResult.slice(0,2).map((producto) => (<p>{producto.title}</p>)) ? <p>{producto.title}</p> : <p>tampoco hay</p>}
             </div>
         </div>
     )

@@ -66,12 +66,19 @@
     display: grid;
     grid-column: 2;
     grid-row: 2;
+}
+
+.container-searcher-2 p {
+    display: grid;
     justify-items: end;
+    align-items: end;
+    color: var(--text-general-2);
 }
 
 @media (max-width: 640px){
 
     .container-main{
-        width: 250px;
+        width: 350px;
+        margin-top: 38.6px;
     }
 }

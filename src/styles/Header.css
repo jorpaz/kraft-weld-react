@@ -128,10 +128,10 @@ filter: invert(100%);
 }
 
 /*? Buscador  */
-.searchbar-container {
-    /* position: absolute;
+/* .searchbar-container {
+    position: absolute;
     top: 40px;
-    right: 0px; */
+    right: 0px;
     background-color: rgba(22, 22, 23, .8);
     backdrop-filter: saturate(130%) blur(10px);
     padding: 10px;
@@ -139,7 +139,7 @@ filter: invert(100%);
     border-radius: 10px;
 }
 
-/* .search-input {
+.search-input {
 width: 100%;
 padding: 5px;
 font-size: 14px;
@@ -231,13 +231,5 @@ border-color: rgba(255, 255, 255, .8);
 
     .navbar-email {
         display: none;
-    }
-
-    .searchbar-container {
-        position: absolute;
-        top: 40px;
-        right: 0px;        
-        }
-
-        
+    }        
 }
