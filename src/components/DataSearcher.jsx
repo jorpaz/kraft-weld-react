@@ -23,8 +23,10 @@ const DataSearcher = ({ busqueda, searchResult }) => {
                 <p>Todos los Productos</p>
             </div>
             <div className="search-match">
-            {searchResult && searchResult.slice(0,2).map((producto) => (<p>{producto.title}</p>)) ? <p>{producto.title}</p> : <p>tampoco hay</p>}
-            </div>
+                {searchResult && searchResult.slice(0,2).map((producto) => (
+                    producto ? <p key={producto.id}>{producto.title}</p> : <p>tampoco hay</p>
+                ))}
+</div>
         </div>
     )
 }
