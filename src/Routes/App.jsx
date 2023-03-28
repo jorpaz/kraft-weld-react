@@ -13,6 +13,7 @@ import AppContext from "../Context/AppContext";
 //?Components
 import ProductList from "../Containers/ProductList";
 import Home from "../pages/Home";
+import Nosotros from "../pages/Nosotros.jsx";
 
 //? Pages
 import Login from "../pages/Login";
@@ -34,6 +35,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/herramientas' element={<ProductList />} />
+          <Route path='/nosotros' element={<Nosotros />} />
           <Route path='/login' element={<Login />} />
           <Route path='/checkout' element={<Checkout />} />
           <Route path='*' element={<NotFound />} />

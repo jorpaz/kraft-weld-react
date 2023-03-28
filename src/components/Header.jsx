@@ -84,7 +84,7 @@ const Header = ({ query, setQuery }) => {
                     <a href="/">Servicios</a>
                 </li>
                 <li>
-                    <a href="/">Nosotros</a>
+                    <a href="/nosotros">Nosotros</a>
                 </li>
                 <li>
                     <a href="/">Contacto</a>
@@ -106,7 +106,7 @@ const Header = ({ query, setQuery }) => {
                     <a href="/">Servicios</a>
                 </li>
                 <li>
-                    <a href="/">Nosotros</a>
+                    <a href="/nosotros">Nosotros</a>
                 </li>
                 <li>
                     <a href="/">Contacto</a>

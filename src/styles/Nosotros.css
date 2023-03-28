@@ -1,10 +1,10 @@
 
 
 /* Estilos para el contenido */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+.container-about {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(2,50%);
 }
 
 /* Estilos para la sección de "Acerca de nosotros" */
