@@ -11,6 +11,8 @@
   font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
-body{
+*{
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }

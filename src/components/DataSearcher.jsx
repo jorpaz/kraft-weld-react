@@ -1,9 +1,15 @@
 import React from 'react';
+import ProductInfo from '../Containers/ProductDetail';
 import '../styles/DataSearcher.css';
 
 const DataSearcher = ({ busqueda, searchResult }) => {
         
     /* const productsFind = productArray.map((elemento) => elemento.price).join(','); */
+
+    //! Si le dan click, mostrar el producto
+    const handleProduct = () =>{
+        <ProductInfo />
+    }
 
     return (
 
@@ -24,7 +30,7 @@ const DataSearcher = ({ busqueda, searchResult }) => {
             </div>
             <div className="search-match">
                 {searchResult && searchResult.slice(0,2).map((producto) => (
-                    producto ? <p key={producto.id}>{producto.title}</p> : <p>tampoco hay</p>
+                    producto ? <p key={producto.id} onClick={handleProduct}>{producto.title}</p> : <p>tampoco hay</p>
                 ))}
 </div>
         </div>

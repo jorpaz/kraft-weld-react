@@ -79,9 +79,6 @@ const SearchBar = ({ query, setQuery }) => {
                     Ofertas
                 </button>
                 </div> */}
-
-                
-
             </div>
         </form>
         {busqueda.length > 0 ? <DataSearcher busqueda={busqueda} searchResult={searchResult} /> : null}
