@@ -55,10 +55,11 @@
     max-height: 350px;
 }
 
-.search-match p {
+.search-match a {
     display: grid;
     justify-items: start;
     align-items: center;
+    width: 100%;
 }
 
 .container-searcher-2{
