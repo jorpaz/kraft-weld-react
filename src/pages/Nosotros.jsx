@@ -35,7 +35,7 @@ const Nosotros = () => {
                 </section>
 
                 <section className="img-container-2">
-                    <figure>
+                    <figure className="img-2">
                         <img src="https://images.unsplash.com/photo-1571841653386-77b2f456dc09?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1737&q=80" alt="personal de soldadura" />
                     </figure>
                 </section>

@@ -26,7 +26,7 @@ const DataSearcher = ({ busqueda, searchResult }) => {
                 </button>
             </div>
             <div className="container-searcher-2">
-                <p>Todos los Productos</p>
+                <a href='/herramientas'>Todos los Productos</a>
             </div>
             <div className="search-match">
                 {searchResult && searchResult.slice(0,2).map((producto) => (
