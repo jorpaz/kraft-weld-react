@@ -8,20 +8,22 @@ const Nosotros = () => {
     return (
     <>
         <Header />
+            <header className="titulo-center">
+                <h1>Acerca de Nosotros</h1>
+            </header>
             <main className="container-about">
                 <section class="banner-1">
-                    <h1>Acerca de Nosotros</h1>
                     <h2>¿Quiénes somos?</h2>
                     <p>Somos una empresa especializada en la venta de herramientas y equipos de soldadura para la industria. Contamos con un equipo de expertos en el área de la soldadura, lo que nos permite ofrecer productos de alta calidad y un servicio de atención al cliente excepcional.</p>
                 </section>
 
-                <section className="img-container-1">
-                    <figure className="img-1">
+                <section className="img-about-container-1">
+                    <figure className="img-about-1">
                         <img src="https://images.unsplash.com/photo-1571841653386-77b2f456dc09?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1737&q=80" alt="personal de soldadura" />
                     </figure>
                 </section>
 
-                <section class="contenido-about">                
+                <section class="banner-2">                
                     <h2>Nuestros valores</h2>
                     <ul>
                         <li>Compromiso con nuestros clientes</li>
@@ -34,9 +36,9 @@ const Nosotros = () => {
                     <p>Nuestro equipo está formado por expertos en soldadura y herramientas, que están comprometidos en ofrecer el mejor servicio a nuestros clientes. Siempre estamos a la vanguardia de las últimas tecnologías y tendencias del mercado, para ofrecer los productos más innovadores y de alta calidad.</p>
                 </section>
 
-                <section className="img-container-2">
-                    <figure className="img-2">
-                        <img src="https://images.unsplash.com/photo-1571841653386-77b2f456dc09?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1737&q=80" alt="personal de soldadura" />
+                <section className="img-about-container-2">
+                    <figure className="img-about-2">
+                        <img src="https://images.unsplash.com/photo-1455165814004-1126a7199f9b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="personal de soldadura" />
                     </figure>
                 </section>
             </main>
