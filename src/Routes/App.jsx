@@ -19,6 +19,7 @@ import Nosotros from "../pages/Nosotros.jsx";
 import Login from "../pages/Login";
 import NotFound from '../pages/NotFound';
 import Checkout from "../pages/Checkout.jsx";
+import Services from "../pages/Services.jsx";
 
 //? Styles
 import '../styles/index.css';
@@ -38,6 +39,7 @@ function App() {
           <Route path='/nosotros' element={<Nosotros />} />
           <Route path='/login' element={<Login />} />
           <Route path='/checkout' element={<Checkout />} />
+          <Route path='/services' element={<Services />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Layout>
